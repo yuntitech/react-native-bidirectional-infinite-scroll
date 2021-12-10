@@ -164,9 +164,9 @@ export const BidirectionalFlatList = (React.forwardRef(
       // Call the parent onScroll handler, if provided.
       onScroll?.(event);
 
-      const offset = event.nativeEvent.contentOffset.y;
-      const visibleLength = event.nativeEvent.layoutMeasurement.height;
-      const contentLength = event.nativeEvent.contentSize.height;
+      const offset = event.nativeEvent.contentOffset.x;
+      const visibleLength = event.nativeEvent.layoutMeasurement.width;
+      const contentLength = event.nativeEvent.contentSize.width;
 
       // Check if scroll has reached either start of end of list.
       const isScrollAtStart = offset < onStartReachedThreshold;
